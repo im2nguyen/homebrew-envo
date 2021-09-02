@@ -5,10 +5,10 @@ class Envo < Formula
   sha256 "5b2243e4278e895fe79a4939f1acc5baee502ea6b309d7df39e7aac515e7d0cf"
   license "MIT"
 
-  depends_on "go" => :build
+  # depends_on "cmake" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    bin.install "envo"
   end
 
   test do
